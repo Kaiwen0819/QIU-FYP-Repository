@@ -1,3 +1,72 @@
+/* Mobile-friendly adjustments for screens below 768px */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        width: 180px; /* Reduce logo size on smaller screens */
+        margin-bottom: 10px;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .nav-icons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .qiu-system-intro {
+        padding: 20px;
+    }
+
+    .intro-container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+
+    .whatsapp-icon {
+        bottom: 20px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .whatsapp-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .contact-section {
+        width: 90%;
+        right: 5%;
+    }
+
+    .chatbot-container {
+        width: 90%;
+        right: 5%;
+    }
+}
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
