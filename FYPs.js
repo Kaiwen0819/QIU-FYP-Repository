@@ -148,7 +148,7 @@ function fetchSearchResults(event) {
                     // Add event listeners for Update and Delete buttons
                     actionsCell.querySelector('.btn-update').addEventListener('click', function () {
                         const matricNumber = this.getAttribute('data-matric');
-                        window.location.href = `update.html?matricNumber=${matricNumber}`;
+                        window.location.href = `Update.html?matricNumber=${matricNumber}`;
                     });
 
                     actionsCell.querySelector('.btn-delete').addEventListener('click', function () {
