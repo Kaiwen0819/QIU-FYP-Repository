@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.contact-section {
+    position: absolute; /* Ensures it stays in the top-right corner under the nav-bar */
+    top: 200px; /* Adjust this to match the height of the nav-bar */
+    right: 20px; /* Aligns the section to the right edge */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds spacing between dropdown and button */
+    align-items: flex-end; /* Aligns content to the right */
+    z-index: 10; /* Ensures it appears above other elements */
+    background-color: white; /* Provides a distinct background */
+    padding: 15px; /* Adds padding for a cleaner layout */
+    border: 1px solid #ccc; /* Adds a subtle border */
+    border-radius: 8px; /* Softens the corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+}
+
+.contact-section h3 {
+    margin: 0 0 10px 0; /* Removes default margins and adds spacing */
+    font-size: 16px; /* Sets an appropriate font size */
+    color: #333; /* Makes the text color consistent */
+}
+
+.contact-section select {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 150px; /* Ensures a consistent width */
+}
+
+.contact-section .cta-button {
+    font-size: 14px;
+    padding: 8px 12px;
+    background-color: #0d1a80;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px; /* Matches the dropdown width */
+    text-align: center;
+}
+
+.contact-section .cta-button:hover {
+    background-color: #09206d; /* Darkens the button on hover */
+}
+
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 240px;
+    margin-right: 60px;
+}
+
+.header-title h1 {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.header-title p {
+    font-size: 14px;
+    color: red;
+    margin: 0;
+}
+
+.repository-title h2 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.nav-bar {
+    background-color: #0d1a80;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-icons .icon {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons .icon:hover {
+    text-decoration: underline;
+}
+
+.qiu-system-intro {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.intro-container {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.intro-container h2 {
+    font-size: 28px;
+    color: #0d1a80;
+    margin-bottom: 20px;
+}
+
+.intro-container p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.intro-container h3 {
+    font-size: 22px;
+    color: #0d1a80;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.intro-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.intro-container ul li {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size: 16px;
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fafafa;
+}
+
+h2 {
+    text-align: center;
+    color: #0d1a80;
+    margin-top: 20px;
+}

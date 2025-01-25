@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="submit.css">
+    <title>Submit FYP</title>
+
+
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+    
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js"></script>
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"></script>
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.1.0/firebase-storage.js"></script>
+
+    <script type="module" src="submit.js" defer></script>       
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-section">
+            <img src="Logo(new).png" alt="QIU Logo" class="logo">
+            <div class="header-title">
+                <!--<h1>QUEST INTERNATIONAL UNIVERSITY</h1>
+                <p>MALAYSIA</p>-->
+            </div>
+        </div>
+        <div class="repository-title">
+            <h1>Quest International University (QIU)</h1>
+        </div>
+    </header>
+    <nav class="nav-bar">
+        <ul class="nav-menu">
+            <li><a href="Home(User).html">Home</a></li>
+            <li><a href="FYPs.html">Search</a></li>
+            <li><a href="Submit.html">Submit</a></li>
+            <li><a href="About(User).html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="submission-container">
+        <h2>Submit Your Final Year Project</h2>
+        <form id="fyp_submission_form">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Issue Date</th>
+                        <th>Matric Number</th>
+                        <th>Author</th>
+                        <th>Title</th>
+                        <th>Subject</th>
+                        <th>Upload file (Must in PDF)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="date" id="issue_date" required></td>
+                        <td><input type="text" id="matric_number" placeholder="Matric Number" required></td>
+                        <td><input type="text" id="author" placeholder="Author Name" required></td>
+                        <td><input type="text" id="title" placeholder="Project Title" required></td>
+                        <td><input type="text" id="subject" placeholder="Subject" required></td>
+                        <td><input type="file" id="pdf" accept=".pdf"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>        
+    </div>
+    <div id="message-box"></div>
+
+    <div class="submission-container">
+        <h2>View Submitted Projects</h2>
+        <button id="view_submissions" class="btn-submit">View Submissions</button>
+        <table id="submission_table" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Issue Date</th>
+                    <th>Matric Number</th>
+                    <th>Author</th>
+                    <th>Title</th>
+                    <th>Subject</th>
+                    <th>Files</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    
+</body>
+
+</html>

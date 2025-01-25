@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Admin.css">
+    <title>Admin</title>    
+    
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js"></script>
+    <script type="module" src="admin.js"></script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo-section">
+            <img src="Logo(new).png" alt="QIU Logo" class="logo">
+            <div class="header-title">
+                <!--<h1>QUEST INTERNATIONAL UNIVERSITY</h1>
+                <p>MALAYSIA</p>-->
+            </div>
+        </div>
+        <div class="repository-title">
+            <h1>Quest International University (QIU)</h1>
+        </div>
+    </header>
+    <nav class="nav-bar">
+        <ul class="nav-menu">
+            <li><a href="Home(Admin).html">Home</a></li>
+            <li><a href="Search(Admin).html">Search</a></li>
+            <li><a href="Admin.html">Mark</a></li>
+            <li><a href="Score(Supervisor).html">Score(Supervisor)</a></li>
+            <li><a href="Score(Moderator).html">Score(Moderator)</a></li>
+            <li><a href="About(Admin).html">About</a></li>
+        </ul>
+        <div class="nav-icons">
+            <a href="Supervisor.html" class="icon supervisor-icon" title="Supervisor">Supervisor</a>
+            <a href="Moderator.html" class="icon moderator-icon" title="Moderator">Moderator</a>
+        </div>
+
+    </nav>
+
+    <section class="content">
+        <h2>FYP Submissions</h2>
+        <table id="fyp-table" border="1">
+            <thead>
+                <tr>
+                    <th>Issue Date</th>
+                    <th>Matric Number</th>
+                    <th>Author</th>
+                    <th>Title</th>
+                    <th>Subject</th>
+                    <th>Uploaded File</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be populated dynamically -->
+            </tbody>
+        </table>
+    </section>
+    
+
+
+</body>
+</html>

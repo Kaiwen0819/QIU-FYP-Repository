@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="supervisor.css">
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js"></script>
+    <script type="module" src="supervisor.js" defer></script>
+    
+    <title>FYP Supervisor Marking</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-section">
+            <img src="Logo(new).png" alt="QIU Logo" class="logo">
+        </div>
+        <div class="repository-title">
+            <h1>Quest International University (QIU)</h1>
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <ul class="nav-menu">
+            <li><a href="Home(Admin).html">Home</a></li>
+            <li><a href="Search(Admin).html">Search</a></li>
+            <li><a href="Admin.html">Mark</a></li>
+            <li><a href="Score(Supervisor).html">Score(Supervisor)</a></li>
+            <li><a href="Score(Moderator).html">Score(Moderator)</a></li>
+            <li><a href="About(Admin).html">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Supervisor Marking Table</h2>
+        <form id="markingForm">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Criteria</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Matric Number</td>
+                        <td><input type="text" name="matricNumber" placeholder="Enter Matric Number" required></td>
+                    </tr>
+                    <tr>
+                        <td>Presentation</td>
+                        <td><input type="number" name="presentation" min="0" max="100" required></td>
+                    </tr>
+                    <tr>
+                        <td>Content</td>
+                        <td><input type="number" name="content" min="0" max="100" required></td>
+                    </tr>
+                    <tr>
+                        <td>Innovation</td>
+                        <td><input type="number" name="innovation" min="0" max="100" required></td>
+                    </tr>
+                    <tr>
+                        <td>Documentation</td>
+                        <td><input type="number" name="documentation" min="0" max="100" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button type="button" id="submitBtn">Submit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </main>
+</body>
+</html>

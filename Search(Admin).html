@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="search(Admin).css">
+    <title>Search FYP Record</title>
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+    
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js"></script>
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"></script>
+
+    <script type="module" src="search(Admin).js"></script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo-section">
+            <img src="Logo(new).png" alt="QIU Logo" class="logo">
+        </div>
+        <div class="repository-title">
+            <h1>Quest International University (QIU)</h1>
+        </div>
+    </header>
+    <nav class="nav-bar">
+        <ul class="nav-menu">
+            <li><a href="Home(Admin).html">Home</a></li>
+            <li><a href="Search(Admin).html">Search</a></li>
+            <li><a href="Admin.html">Mark</a></li>
+            <li><a href="Score(Supervisor).html">Score(Supervisor)</a></li>
+            <li><a href="Score(Moderator).html">Score(Moderator)</a></li>
+            <li><a href="About(Admin).html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="search-section">
+            <h2>Search Final Year Projects (FYPs)</h2>
+            <form id="search-form">
+                <div class="search-group">
+                    <select>
+                        <option value="title">Title</option>
+                        <option value="author">Author</option>
+                        <option value="issueDate">Date Issued</option>
+                        <option value="matricNumber">Matric Number</option>
+                        <option value="subject">Subject</option>
+                    </select>
+                    <input type="text" placeholder="Enter keyword">
+                    <button type="button" id="add-column-btn" class="add-column-btn">+</button>
+                </div>
+                <div id="additional-rows"></div>
+                <div class="search-actions">
+                    <button type="button" id="reset-btn" class="btn-reset">Reset</button>
+                    <button type="submit" class="btn-search">Search</button>
+                </div>
+            </form>
+            <div id="search-results">
+                <table id="results-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Date Issued</th>
+                            <th>Matric Number</th>
+                            <th>Subject</th>
+                            <th>Files</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="results-body">
+                        <!-- Results will be dynamically added here -->
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
