@@ -12,51 +12,60 @@ body {
     border-bottom: 1px solid #ccc;
 }
 
-.contact-section {
-    position: absolute; /* Ensures it stays in the top-right corner under the nav-bar */
-    top: 200px; /* Adjust this to match the height of the nav-bar */
-    right: 20px; /* Aligns the section to the right edge */
+.whatsapp-icon {
+    position: absolute;
+    bottom: 500px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.contact-section {
+    display: none;
+    position: absolute; 
+    top: 250px; /* Adjust position */
+    right: 20px;
     flex-direction: column;
-    gap: 10px; /* Adds spacing between dropdown and button */
-    align-items: flex-end; /* Aligns content to the right */
-    z-index: 10; /* Ensures it appears above other elements */
-    background-color: white; /* Provides a distinct background */
-    padding: 15px; /* Adds padding for a cleaner layout */
-    border: 1px solid #ccc; /* Adds a subtle border */
-    border-radius: 8px; /* Softens the corners */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+    gap: 8px; /* Reduced spacing */
+    align-items: flex-end; 
+    z-index: 10; 
+    background-color: white; 
+    padding: 10px; /* Reduced padding */
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    width: 220px; /* Smaller width */
 }
 
-.contact-section h3 {
-    margin: 0 0 10px 0; /* Removes default margins and adds spacing */
-    font-size: 16px; /* Sets an appropriate font size */
-    color: #333; /* Makes the text color consistent */
+.contact-section select, .contact-section button {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
 }
 
-.contact-section select {
-    padding: 8px;
-    font-size: 14px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 150px; /* Ensures a consistent width */
-}
-
-.contact-section .cta-button {
-    font-size: 14px;
-    padding: 8px 12px;
+.cta-button {
     background-color: #0d1a80;
     color: white;
     border: none;
+    padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
-    width: 150px; /* Matches the dropdown width */
-    text-align: center;
 }
 
-.contact-section .cta-button:hover {
-    background-color: #09206d; /* Darkens the button on hover */
+.cta-button:hover {
+    background-color: #09206d;
 }
+
 
 
 .logo-section {
@@ -199,8 +208,8 @@ body {
 }
 
 .chatbot-container {
-    position: fixed;
-    bottom: 20px;
+    position: absolute;
+    bottom: 1px;
     right: 20px;
     width: 300px;
     background-color: #f4f4f4;

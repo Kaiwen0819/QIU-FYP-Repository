@@ -1,12 +1,22 @@
+document.getElementById('whatsapp-icon').addEventListener('click', function() {
+    const contactSection = document.getElementById('contact-section');
+    if (contactSection.style.display === "none" || contactSection.style.display === "") {
+        contactSection.style.display = "block";
+    } else {
+        contactSection.style.display = "none";
+    }
+});
+
 document.getElementById('whatsapp-button').addEventListener('click', function() {
     const selectedPerson = document.getElementById('person-select').value;
     if (selectedPerson) {
         const message = encodeURIComponent("Hello, I would like to discuss...");
         window.open(`https://wa.me/${selectedPerson}?text=${message}`, '_blank');
     } else {
-        alert("Please select a person to contact.");
+        alert("Please select a lecturer to contact.");
     }
 });
+
 
 const chatbotMessages = document.getElementById('chatbot-messages');
 const chatbotInput = document.getElementById('chatbot-input');
