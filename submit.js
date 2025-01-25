@@ -124,7 +124,7 @@ document.getElementById("view_submissions").addEventListener("click", function (
         document.querySelectorAll(".btn-update").forEach((btn) =>
             btn.addEventListener("click", function () {
                 const matricNumber = btn.getAttribute("data-matric");
-                window.location.href = `Update.html?matricNumber=${matricNumber}`;
+                window.location.href = `update.html?matricNumber=${matricNumber}`;
             })
         );
 
