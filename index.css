@@ -58,11 +58,14 @@
     .contact-section {
         width: 90%;
         right: 5%;
+        top: auto; /* Remove fixed top position */
+        bottom: 80px; /* Position above the WhatsApp button */
     }
 
     .chatbot-container {
-        width: 90%;
-        right: 5%;
+        width: 95%;
+        right: 2.5%;
+        bottom: 70px; /* Avoid overlap with WhatsApp button */
     }
 }
 
