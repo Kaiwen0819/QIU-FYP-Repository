@@ -1,57 +1,41 @@
-document.getElementById('whatsapp-icon').addEventListener('click', function() {
-    const contactSection = document.getElementById('contact-section');
-    if (contactSection.style.display === "none" || contactSection.style.display === "") {
-        contactSection.style.display = "block";
-    } else {
-        contactSection.style.display = "none";
+document.addEventListener("DOMContentLoaded", function() {
+    const stairContainer = document.querySelector(".stair-container");
+    const numStairs = 21;
+
+    // 确保容器为空，再次填充柱子
+    stairContainer.innerHTML = "";
+    for (let i = 0; i < numStairs; i++) {
+        let stair = document.createElement("div");
+        stair.classList.add("stair");
+        stairContainer.appendChild(stair);
     }
+
+    const stairs = document.querySelectorAll(".stair");
+    const middleIndex = Math.floor(numStairs / 2);
+    let cycleTime = 1200;
+
+    function raiseStairs() {
+        stairs.forEach((stair, index) => {
+            let delay = Math.abs(index - middleIndex) * 100;
+            setTimeout(() => {
+                stair.style.height = "150px";
+                stair.style.opacity = "1";
+                stair.style.transition = "height 0.5s ease-in-out, opacity 0.5s ease-in-out";
+            }, delay);
+        });
+
+        // 3秒后消失，并重新开始动画
+        setTimeout(() => {
+            stairs.forEach((stair, index) => {
+                let delay = Math.abs(index - middleIndex) * 100;
+                setTimeout(() => {
+                    stair.style.height = "0px";
+                    stair.style.opacity = "0";
+                }, delay);
+            });
+            setTimeout(raiseStairs, 500);
+        }, cycleTime);
+    }
+
+    raiseStairs();
 });
-
-document.getElementById('whatsapp-button').addEventListener('click', function() {
-    const selectedPerson = document.getElementById('person-select').value;
-    if (selectedPerson) {
-        const message = encodeURIComponent("Hello, I would like to discuss...");
-        window.open(`https://wa.me/${selectedPerson}?text=${message}`, '_blank');
-    } else {
-        alert("Please select a lecturer to contact.");
-    }
-});
-
-
-const chatbotMessages = document.getElementById('chatbot-messages');
-const chatbotInput = document.getElementById('chatbot-input');
-const chatbotSend = document.getElementById('chatbot-send');
-
-chatbotSend.addEventListener('click', () => {
-    const userMessage = chatbotInput.value.trim();
-    if (userMessage) {
-        appendMessage('You', userMessage);
-        chatbotInput.value = '';
-        generateResponse(userMessage);
-    }
-});
-
-function appendMessage(sender, message) {
-    const messageDiv = document.createElement('div');
-    messageDiv.textContent = `${sender}: ${message}`;
-    chatbotMessages.appendChild(messageDiv);
-    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-}
-
-function generateResponse(userMessage) {
-    let response = "Sorry, I didn't understand that. I just can give you instruct of this repository Or you just type the keyword only!!";
-    const lowerCaseMessage = userMessage.toLowerCase();
-
-    if (lowerCaseMessage.includes('hello') || lowerCaseMessage.includes('hai') || lowerCaseMessage.includes('hi')) {
-        response = "Hello! How can I assist you with the QIU FYP repository?";
-    } else if (userMessage.toLowerCase().includes('submit')) {
-        response = "To submit an FYP, please go to the 'Submit' section of the site.";
-    } else if (lowerCaseMessage.includes('search') || lowerCaseMessage.includes('view')) {
-        response = "To view an FYP, please go to the 'Search' section of the site.";
-    } else if (lowerCaseMessage.includes('about')) {
-        response = "To Find about university, please go to the 'About' section of the site.";
-    } else if (lowerCaseMessage.includes('mark') || lowerCaseMessage.includes('moderator') || lowerCaseMessage.includes('supervisor')) {
-        response = "To Mark an FYP, please go to the 'Mark' section of the site.";
-    }
-    setTimeout(() => appendMessage('AI', response), 1000);
-}
